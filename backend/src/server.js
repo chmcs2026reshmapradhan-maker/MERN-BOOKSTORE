@@ -6,9 +6,10 @@ import cors from "cors";
 
 dotenv.config()
 const app=express();
-const port=process.env.PORT || 3001
+const port=process.env.PORT || 3000
 app.use(cors({
     // origin:"http://localhost:5173"
+    origin:"https://bookstore-k21v.onrender.com"
 }))
 app.use(express.json())
 app.use("/books", bookRoutes)
